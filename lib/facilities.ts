@@ -49,7 +49,7 @@ export const FACILITIES: Facility[] = [
     id: "beerbusch",
     name: "Beerbusch direkt vor der Tür",
     blurb:
-      "Wald „Beerbusch" mit ausgedehnten Reitwegen — lange Ausritte ins Grüne, jederzeit aus dem Stall.",
+      "Wald „Beerbusch“ mit ausgedehnten Reitwegen — lange Ausritte ins Grüne, jederzeit aus dem Stall.",
     icon: "Trees",
   },
 ];

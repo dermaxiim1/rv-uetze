@@ -139,7 +139,7 @@ export const SITE = {
     } satisfies SectionHeadingParts,
     paragraphs: [
       "Der Reit- und Fahrverein Uetze und Umgebung e.V. wurde zunächst in Uetze gegründet, ist aber bereits seit dem Umzug auf das Vereinsgelände im Jahr 1974 in Katensen ansässig. In herrlicher Lage, am Ortsrand des kleinen Dorfes, liegt unsere Reitanlage.",
-      "Direkt angrenzend an den Wald „Beerbusch" mit seinen ausgedehnten Reitwegen — wir finden hier alles, um unser Hobby in vollen Zügen genießen zu können.",
+      "Direkt angrenzend an den Wald „Beerbusch“ mit seinen ausgedehnten Reitwegen — wir finden hier alles, um unser Hobby in vollen Zügen genießen zu können.",
       "Wir sind ein kleiner und persönlicher Verein mit ca. 120 Mitgliedern. Diese Größe erlaubt intensive Trainings­möglichkeiten und einen direkten Draht in den Vorstand — egal ob es um Boxenanfragen, Turnierteilnahmen oder den nächsten Arbeitseinsatz geht.",
       "Über das Jahr hinweg organisieren wir Lehrgänge in verschiedenen Disziplinen, gemeinsame Ausritte, Flohmärkte, Grünkohl-Essen und Weihnachtsritte — und im August unser Sommerturnier mit Dressur- und Springprüfungen vom Führzügel bis zur Klasse L.",
     ],
