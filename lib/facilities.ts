@@ -11,53 +11,45 @@ export const FACILITIES: Facility[] = [
   {
     id: "reithalle",
     name: "Reithalle",
-    dimensions: "43 × 20 m",
     blurb:
-      "Direkt über die Stallgasse erreichbar. Viel Licht, eigene Bewässerungsanlage. Schul- und Voltigierbetrieb sowie Dressur- und Springunterricht.",
+      "Klassische Reithalle für Dressur- und Springunterricht, Lehrgänge und Hobby-Horse-Training. Hallenplan via Aushang am Heulager.",
     icon: "Home",
   },
   {
-    id: "aussenplatz",
-    name: "Außenreitplatz",
-    dimensions: "60 × 30 m",
+    id: "stallungen",
+    name: "Pensionsboxen",
+    capacity: "18 Boxen",
     blurb:
-      "Großzügig direkt neben der Halle. Festes Dressurviereck und verschiedene Hindernisse — ideal zur Vorbereitung auf Prüfung oder Parcours.",
-    icon: "LandPlot",
+      "Großzügige, helle und luftige Boxen mit Außenfenstern und beheizten Tränken. Aktuell ist eine Box frei.",
+    icon: "Square",
   },
   {
-    id: "reiterstuebchen",
-    name: "Reiterstübchen",
+    id: "solarium",
+    name: "Solarium & Waschplatz",
     blurb:
-      "Großzügiger Aufenthaltsraum im oberen Stockwerk. Überblick über Halle und Außenplatz, gemütlich für Beisammensein, Klönen, Vereinsabende.",
+      "Solarium und Waschplatz im Stallgebäude — für die Pflege nach Ausritt, Training oder Turnier, mit warmem und kaltem Wasser.",
     icon: "Coffee",
   },
   {
-    id: "stallungen",
-    name: "Stallungen",
-    capacity: "23 + 4 Boxen",
+    id: "paddocks",
+    name: "Paddocks",
+    capacity: "2 separate Flächen",
     blurb:
-      "23 Innen- und Außenboxen für Einsteller, 8–16 m² groß, luftig. Plus 4 Boxen für die vereinseigenen Schulpferde.",
-    icon: "Square",
+      "Zwei großzügige, getrennte Paddocks für Stuten und Wallache, mit Heu-Raufen — auch im Winter Auslauf das ganze Jahr.",
+    icon: "LandPlot",
   },
   {
     id: "weiden",
     name: "Sommerweiden",
     blurb:
-      "Werktags morgens raus, mittags rein. Harmonische Gruppen, gepflegte Flächen. Fester Weideplatz von Frühjahr bis Herbst möglich.",
+      "Weiden direkt an die Anlage angrenzend. Weide- und Paddockgang werden von den Einstellern eigenverantwortlich organisiert — direkter Draht in den Vorstand.",
     icon: "Leaf",
   },
   {
-    id: "paddock",
-    name: "Winterweiden & Paddocks",
+    id: "beerbusch",
+    name: "Beerbusch direkt vor der Tür",
     blurb:
-      "Werktags Paddock, je nach Wetterlage zusätzlich Winterweide. Tägliche Bewegung das ganze Jahr.",
-    icon: "Snowflake",
-  },
-  {
-    id: "leinemasch",
-    name: "Leinemasch direkt vor der Tür",
-    blurb:
-      "Naturschutzgebiet direkt am Außenplatz. Lange Ausritte ohne Asphalt, jederzeit aus dem Stall.",
+      "Wald „Beerbusch" mit ausgedehnten Reitwegen — lange Ausritte ins Grüne, jederzeit aus dem Stall.",
     icon: "Trees",
   },
 ];

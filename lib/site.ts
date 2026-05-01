@@ -1,21 +1,7 @@
 /**
- * SITE — die zentrale Konfiguration des Templates.
- *
- * Beim Rebranding für einen anderen Reiterhof: nur diese Datei
- * (plus die Listen-Dateien lib/horses.ts, lib/facilities.ts, lib/team.ts,
- * lib/membership.ts, lib/events.ts, lib/reviews.ts, lib/gallery.ts,
- * lib/pension-features.ts, lib/lessons.ts und die Bilder unter public/)
- * anfassen.
- *
+ * SITE — die zentrale Konfiguration für den RFU.
  * Heading-Konvention: jede Sektion hat ein dreiteiliges Heading
- * `{ before, em, after }`, das so gerendert wird:
- *
- *   {before}
- *   <em>{em}</em>
- *   {after}
- *
- * `em` wird italic + Akzentfarbe gesetzt. Mit "<br/>" lassen sich Zeilen-
- * umbrüche im Heading erzwingen — siehe Beispiele unten.
+ * `{ before, em, after }`.
  */
 
 export type SiteHourBlock = {
@@ -33,90 +19,87 @@ export const SITE = {
   // ====================================================================
   // IDENTITY
   // ====================================================================
-  name: "Reiterverein Kronsberg e.V.",
-  shortName: "RVK",
-  tagline: "Reiterverein seit über 70 Jahren · Hannover-Laatzen",
+  name: "Reit- und Fahrverein Uetze und Umgebung e.V.",
+  shortName: "RFU",
+  tagline: "Reit- und Fahrverein in Uetze-Katensen · am Beerbusch zuhause",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     (process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : "https://reiterverein-kronsberg.vercel.app"),
+      : "https://rv-uetze.vercel.app"),
   description:
-    "Reiterverein Kronsberg e.V. — seit über 70 Jahren in Hannover-Laatzen, direkt an der Leinemasch. Reitunterricht auf vereinseigenen Schulpferden, Voltigieren ab 6 Jahren, 23 Innen- und Außenboxen für Einsteller.",
-  owner: "Stephanie Nevado Navarro · 1. Vorsitzende",
-  region: "Hannover-Laatzen · Leinemasch",
-  founded: "1953",
+    "Reit- und Fahrverein Uetze und Umgebung e.V. — seit 1974 in Uetze-Katensen. 18 Pensionsboxen mit Solarium und Waschplatz, Reithalle und Außenplatz, direkter Zugang zum Wald Beerbusch. Persönlicher Verein mit ca. 120 Mitgliedern.",
+  owner: "Dr. Christina Schleifer · 1. Vorsitzende",
+  region: "Uetze-Katensen · Region Hannover",
+  founded: "1974",
 
   // ====================================================================
   // SEO
   // ====================================================================
   keywords: [
-    "Reiterverein Kronsberg",
-    "RVK",
-    "Reitunterricht Hannover",
-    "Reitunterricht Laatzen",
-    "Voltigieren Hannover",
-    "Schulpferd Hannover",
-    "Reitstunde Anfänger",
-    "Boxen mieten Laatzen",
-    "Pensionsstall Hannover",
-    "Reitverein Niedersachsen",
+    "Reit- und Fahrverein Uetze",
+    "Reitverein Uetze",
+    "Pensionsstall Uetze",
+    "Boxen mieten Uetze",
+    "Reithalle Katensen",
+    "Reitanlage Beerbusch",
+    "Sommerturnier Uetze",
+    "Reitverein Region Hannover",
+    "Hobby-Horse Uetze",
+    "Reitturnier Niedersachsen",
   ],
-  /** Sport-Disziplinen für JSON-LD (schema.org SportsClub).
-   *  Englische schema.org-Werte: Equestrian, Dressage, Show Jumping, Vaulting … */
-  sports: ["Equestrian", "Dressage", "Show Jumping", "Vaulting"],
-  /** Bundesland für JSON-LD addressRegion. */
+  sports: ["Equestrian", "Dressage", "Show Jumping", "Driving"],
   addressRegion: "Niedersachsen",
 
   // ====================================================================
   // CONTACT & ADDRESS
   // ====================================================================
   contact: {
-    phone: "0179 6697138",
-    phoneTel: "+491796697138",
-    phoneLabel: "Boxen-Anfragen · Frau Nevado-Navarro",
-    email: "info@reiterverein-kronsberg.de",
+    phone: "",
+    phoneTel: "",
+    phoneLabel: "",
+    email: "info@rv-uetze.de",
     contactForm: "/kontakt",
   },
 
   address: {
-    street: "Hildesheimer Straße 2a",
-    postalCode: "30880",
-    city: "Laatzen",
+    street: "Am Wolfsbusch 2",
+    postalCode: "31311",
+    city: "Uetze-Katensen",
     region: "Region Hannover",
-    googleMapsQuery: "Hildesheimer+Stra%C3%9Fe+2a,+30880+Laatzen",
-    geo: { lat: 52.3145, lng: 9.7935 },
-    transit: "Stadtbahn 1/2 — Haltestelle Am Brabrinke",
+    googleMapsQuery: "Am+Wolfsbusch+2,+31311+Uetze",
+    geo: { lat: 52.4727, lng: 10.2167 },
+    transit: "Postanschrift Vorstand: Putjebusch 4, 31311 Uetze/Katensen",
   },
 
   visitNote: [
-    { dayLabel: "Schnupperstunden", note: "Nach Vereinbarung" },
-    { dayLabel: "Boxen-Besichtigung", note: "Telefonisch absprechen" },
+    { dayLabel: "Boxenanfrage", note: "Per E-Mail an info@rv-uetze.de" },
+    { dayLabel: "Vorstand", note: "Dr. Christina Schleifer" },
   ] satisfies readonly SiteHourBlock[],
 
   nav: [
     { href: "#verein", label: "Der Verein" },
-    { href: "#reitanlage", label: "Reitanlage" },
-    { href: "#schulpferde", label: "Schulpferde" },
-    { href: "#unterricht", label: "Unterricht" },
+    { href: "#reitanlage", label: "Anlage" },
+    { href: "#stallungen", label: "Boxen" },
     { href: "#mitgliedschaft", label: "Mitgliedschaft" },
+    { href: "#veranstaltungen", label: "Turnier" },
     { href: "#anfahrt", label: "Anfahrt" },
   ] as const,
 
   // ====================================================================
-  // SECTION VISIBILITY (false = Sektion wird nicht gerendert)
+  // SECTION VISIBILITY
   // ====================================================================
   sections: {
     about: true,
     facilities: true,
-    pension: true, // Einsteller-Boxen — bei reinem Reitschulbetrieb auf false
-    horses: true,
-    lessons: true, // Reitunterricht / Voltigieren
+    pension: true,
+    horses: false, // RVU hat keine Schulpferde
+    lessons: true,
     membership: true,
     events: true,
     team: true,
-    reviews: true,
-    gallery: true,
+    reviews: false,
+    gallery: false, // bis Fotos vorliegen
     contact: true,
   },
 
@@ -125,22 +108,22 @@ export const SITE = {
   // ====================================================================
   hero: {
     image: "/images/hero/anlage.jpg",
-    imageAlt: "Pferd galoppiert auf der Koppel im Abendlicht",
+    imageAlt: "Reitanlage in Uetze-Katensen am Beerbusch",
     title: {
-      line1: "Reitunterricht,",
-      em: "Voltigieren",
-      line2After: "und Boxen",
-      line3: "seit über 70 Jahren.",
+      line1: "Pensionsboxen,",
+      em: "Sommerturnier",
+      line2After: "und Reitwege",
+      line3: "am Beerbusch.",
     },
-    body: "Der Reiterverein Kronsberg e.V. — südlich von Hannover, direkt an der Leinemasch. Reitstunden auf vereinseigenen Schulpferden, Voltigieren ab sechs Jahren und 23 Boxen für Einsteller.",
-    secondaryCtaLabel: "Schnupperstunde anfragen",
-    badge: { big: "RVK", small: "Reiterverein · seit 1953" },
+    body: "Der Reit- und Fahrverein Uetze und Umgebung e.V. — am Ortsrand von Katensen, mit direktem Zugang zum Beerbusch. 18 helle Pensionsboxen mit Solarium und Waschplatz, Reithalle, getrennte Paddocks und ein Sommerturnier mit Tradition.",
+    secondaryCtaLabel: "Boxen-Anfrage senden",
+    badge: { big: "RFU", small: "in Katensen seit 1974" },
     scrollHint: "Mehr erfahren",
     stats: [
-      "~150 Mitglieder",
-      "7 Schulpferde & Ponys",
-      "Halle 43 × 20 m",
-      "Direkt an der Leinemasch",
+      "ca. 120 Mitglieder",
+      "18 Pensionsboxen",
+      "Solarium & Waschplatz",
+      "Direkt am Beerbusch",
     ],
   },
 
@@ -150,83 +133,79 @@ export const SITE = {
   about: {
     eyebrow: "Der Verein",
     heading: {
-      before: "Seit über 70 Jahren",
-      em: "für Pferd und Reiter",
+      before: "Klein, persönlich,",
+      em: "und intensiv",
       after: ".",
     } satisfies SectionHeadingParts,
     paragraphs: [
-      "Der Reiterverein Kronsberg e. V. (RVK) ist seit 70 Jahren im südlichen Teil Hannovers beheimatet — direkt hinter der Stadtgrenze zwischen Hannover und Laatzen, unweit der Hildesheimer Straße, an der idyllischen Leinemasch.",
-      "Zurzeit zählen wir rund 150 Mitglieder aller Altersgruppen und sind fester Bestandteil des Laatzener Vereinslebens. Unsere Mitglieder stammen aus Laatzen und Hannover, aber auch aus Sarstedt und der Region Hildesheim.",
-      "Bei uns fühlen sich Reiter aller Disziplinen wohl — Springen, Dressur, Freizeitreiten für Anfänger und Fortgeschrittene — sowie der voltigierende Nachwuchs ab sechs Jahren.",
-      "Wir bieten Reit- und Voltigierunterricht auf insgesamt sieben vereinseigenen Schulpferden und Schulponys, sowie die Unterbringung Ihres eigenen Pferdes inklusive Weidedienst. Darüber hinaus bietet der RVK Abzeichenlehrgänge und Lehrgänge externer Trainer an.",
+      "Der Reit- und Fahrverein Uetze und Umgebung e.V. wurde zunächst in Uetze gegründet, ist aber bereits seit dem Umzug auf das Vereinsgelände im Jahr 1974 in Katensen ansässig. In herrlicher Lage, am Ortsrand des kleinen Dorfes, liegt unsere Reitanlage.",
+      "Direkt angrenzend an den Wald „Beerbusch" mit seinen ausgedehnten Reitwegen — wir finden hier alles, um unser Hobby in vollen Zügen genießen zu können.",
+      "Wir sind ein kleiner und persönlicher Verein mit ca. 120 Mitgliedern. Diese Größe erlaubt intensive Trainings­möglichkeiten und einen direkten Draht in den Vorstand — egal ob es um Boxenanfragen, Turnierteilnahmen oder den nächsten Arbeitseinsatz geht.",
+      "Über das Jahr hinweg organisieren wir Lehrgänge in verschiedenen Disziplinen, gemeinsame Ausritte, Flohmärkte, Grünkohl-Essen und Weihnachtsritte — und im August unser Sommerturnier mit Dressur- und Springprüfungen vom Führzügel bis zur Klasse L.",
     ],
     quote: {
-      text: "Riskieren Sie einen kleinen Blick auf unsere Themen- und Bilderseiten — den Stall, den Unterricht, das bunte Vereinsleben. Sie können auch gerne einfach vorbeikommen und sich umschauen.",
-      attribution: "Vorstand des RVK",
+      text: "Optimale Wettkampfbedingungen, professionelle Organisation und liebevolle Verpflegung.",
+      attribution: "Über unser Sommerturnier",
     },
   },
 
   facilities: {
-    eyebrow: "Die Reitanlage",
+    eyebrow: "Die Anlage",
     heading: {
       before: "Halle, Plätze",
-      em: "und ein Stübchen",
+      em: "und der Wald",
       after: ".",
     } satisfies SectionHeadingParts,
     intro:
-      "Vereinsanlage mit klassischer Reithalle, großzügigem Außenplatz und einem Aufenthaltsraum, der den Verein im wahrsten Sinne zusammenhält.",
+      "Klassische Reithalle, Außenanlagen und 18 helle Pensionsboxen mit Solarium und Waschplatz — und vor der Tür der Beerbusch mit Reitwegen ins Grüne.",
   },
 
   pension: {
-    eyebrow: "Stallungen & Weiden",
+    eyebrow: "Boxenvermietung",
     heading: {
-      before: "Was eine",
-      em: "Box bei uns",
-      after: "enthält.",
+      before: "18 Boxen,",
+      em: "selbstorganisiert",
+      after: ".",
     } satisfies SectionHeadingParts,
     contactNote: {
-      prefix: "Sie interessieren sich für eine Box? Frau Nevado-Navarro erreichen Sie unter ",
-      join: " — oder per E-Mail an ",
+      prefix:
+        "Aktuell ist eine Box frei. Anfragen für Boxen und aktuelle Preise gerne per E-Mail an ",
+      join: "",
       suffix: ".",
     },
   },
 
   horses: {
-    eyebrow: "Unsere Schulpferde",
-    heading: {
-      before: "Vereinseigen.",
-      em: "Lehrer auf vier Beinen",
-      after: ".",
-    } satisfies SectionHeadingParts,
-    intro:
-      "Vom Volti-Pony bis zum Hannoveraner Wallach — sieben vereinseigene Schulpferde und Ponys, die jeden Tag im Reit- und Voltiunterricht im Einsatz sind.",
+    eyebrow: "",
+    heading: { before: "", em: "", after: "" } satisfies SectionHeadingParts,
+    intro: "",
   },
 
   lessons: {
-    eyebrow: "Unterricht",
+    eyebrow: "Training & Lehrgänge",
     heading: {
-      before: "Anfänger oder",
-      em: "Routinier",
+      before: "Lehrgänge",
+      em: "übers Jahr",
       after: ".",
     } satisfies SectionHeadingParts,
     intro:
-      "Dem RVK liegt die Basisausbildung besonders am Herzen. Erfahrene Trainer und Ausbilder, qualifizierter und individueller Unterricht — auf unseren vereinseigenen Schulpferden.",
-    primaryCtaLabel: "Schnupperstunde anfragen",
-    note: "Hallenplan und genaue Zeiten auf Anfrage",
+      "Über das Jahr hinweg verschiedene Lehrgänge in Dressur, Springen und Bodenarbeit — durchgeführt von externen Trainern. Hobby-Horse-Training neu im Programm.",
+    primaryCtaLabel: "Termine erfragen",
+    note: "Konkrete Lehrgangstermine via Aushang am Heulager oder per E-Mail",
   },
 
   membership: {
-    eyebrow: "Mitgliedschaft & Preise",
+    eyebrow: "Mitgliedschaft",
     heading: {
-      before: "Klar geregelt,",
-      em: "familiär gelebt",
+      before: "Aktuell keine",
+      em: "Aufnahmegebühr",
       after: ".",
     } satisfies SectionHeadingParts,
     intro:
-      "Sie möchten dem RVK beitreten? Hier finden Sie unsere aktuellen Beiträge im Überblick. Die Aufnahmegebühr wird sofort, der Jahresbeitrag jährlich zum 1.1. im Voraus fällig.",
+      "Wir freuen uns über neue Mitglieder. Aktuell wird keine Aufnahmegebühr erhoben — der aktuelle Jahresbeitrag und der Mitgliedsantrag werden vom Vorstand zugeschickt.",
     contactNote: {
-      prefix: "Den Aufnahmeantrag senden wir Ihnen gerne zu — kurzer Anruf bei ",
-      join: " oder eine E-Mail an ",
+      prefix: "Mitgliedschaft anfragen — kurze E-Mail an ",
+      join: "",
       suffix: " genügt.",
     },
   },
@@ -234,63 +213,55 @@ export const SITE = {
   events: {
     eyebrow: "Veranstaltungen",
     heading: {
-      before: "Im Kalender",
-      em: "eines Jahres",
+      before: "Turnier, Reiterrallye",
+      em: "und Stallfeste",
       after: ".",
     } satisfies SectionHeadingParts,
     intro:
-      "Lehrgänge, Vereinstage und Stallfeste — offen für Mitglieder, Einsteller und Gäste. Termine erfragen Sie bitte direkt.",
+      "Lehrgänge übers Jahr, gemeinsame Ausritte und das traditionelle Sommerturnier am dritten August­wochenende — bei optimalen Wettkampf­bedingungen mit liebevoller Verpflegung.",
   },
 
   team: {
-    eyebrow: "Das Team",
+    eyebrow: "Vorstand & Trainer",
     heading: {
-      before: "Persönlich.",
-      em: "Im besten Sinne.",
-      after: "",
+      before: "Persönlicher",
+      em: "Verein",
+      after: ".",
     } satisfies SectionHeadingParts,
   },
 
   reviews: {
-    eyebrow: "Was Einsteller sagen",
-    heading: {
-      before: "Stimmen vom",
-      em: "Stallgang",
-      after: ".",
-    } satisfies SectionHeadingParts,
+    eyebrow: "",
+    heading: { before: "", em: "", after: "" } satisfies SectionHeadingParts,
   },
 
   gallery: {
-    eyebrow: "Eindrücke",
-    heading: {
-      before: "Vom Hof in den",
-      em: "Wald",
-      after: ".",
-    } satisfies SectionHeadingParts,
+    eyebrow: "",
+    heading: { before: "", em: "", after: "" } satisfies SectionHeadingParts,
   },
 
   contactSection: {
     eyebrow: "Anfahrt & Kontakt",
     heading: {
-      before: "So finden",
-      em: "Sie zu uns",
+      before: "Direkt am",
+      em: "Beerbusch",
       after: ".",
     } satisfies SectionHeadingParts,
     byCar: {
       label: "Mit dem Auto",
-      desc: "Aus Hannover kommend auf der Hildesheimer Straße in Richtung Laatzen. Nach der Wilkenburger Straße sind es noch ca. 200 m. Die Einfahrt zum RVK befindet sich direkt hinter der Tankstelle rechts.",
+      desc: "Vereinsgelände Am Wolfsbusch 2 in 31311 Uetze, Ortsteil Katensen. Aus Hannover über die A2 (Ausfahrt Lehrte) oder A7 (Ausfahrt Mellendorf) Richtung Uetze — am Ortsrand von Katensen führt der Weg direkt am Beerbusch vorbei.",
     },
     byTransit: {
-      label: "Mit der Stadtbahn",
-      desc: "Linie 1 oder 2 bis zur Haltestelle „Am Brabrinke“. Von dort etwa 100 Meter stadtauswärts gehen — direkt hinter der Tankstelle rechts ist der Zugang.",
+      label: "Postanschrift",
+      desc: "Dr. Christina Schleifer · Putjebusch 4 · 31311 Uetze/Katensen — Boxenanfragen und Mitgliedschaft am besten per E-Mail an info@rv-uetze.de.",
     },
-    ctaLabel: "Jetzt anrufen",
+    ctaLabel: "E-Mail schreiben",
   },
 
   footer: {
     tagline:
-      "Reitsportverein in Hannover-Laatzen, direkt an der Leinemasch. Reitunterricht, Voltigieren und Boxen für Einsteller — seit über 70 Jahren.",
-    addressLabel: "Adresse",
+      "Reit- und Fahrverein in Uetze-Katensen · seit 1974 am Beerbusch · ca. 120 Mitglieder.",
+    addressLabel: "Vereinsgelände",
     contactLabel: "Kontakt",
     infoLabel: "Information",
   },

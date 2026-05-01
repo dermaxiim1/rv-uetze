@@ -56,23 +56,27 @@ export function ContactSection() {
             <h3 className="text-xs uppercase tracking-[0.16em] text-forest">
               Kontakt
             </h3>
-            <a
-              href={`tel:${SITE.contact.phoneTel}`}
-              className="mt-4 block transition-opacity hover:opacity-80"
-            >
-              <span className="text-xs uppercase tracking-[0.14em] text-ink-soft">
-                Telefon
-              </span>
-              <span className="mt-1 block font-serif text-2xl italic">
-                {SITE.contact.phone}
-              </span>
-              <span className="mt-1 block text-xs text-ink-soft/80">
-                {SITE.contact.phoneLabel}
-              </span>
-            </a>
+            {SITE.contact.phoneTel && (
+              <a
+                href={`tel:${SITE.contact.phoneTel}`}
+                className="mt-4 block transition-opacity hover:opacity-80"
+              >
+                <span className="text-xs uppercase tracking-[0.14em] text-ink-soft">
+                  Telefon
+                </span>
+                <span className="mt-1 block font-serif text-2xl italic">
+                  {SITE.contact.phone}
+                </span>
+                {SITE.contact.phoneLabel && (
+                  <span className="mt-1 block text-xs text-ink-soft/80">
+                    {SITE.contact.phoneLabel}
+                  </span>
+                )}
+              </a>
+            )}
             <a
               href={`mailto:${SITE.contact.email}`}
-              className="mt-6 block transition-opacity hover:opacity-80"
+              className="mt-4 block transition-opacity hover:opacity-80"
             >
               <span className="text-xs uppercase tracking-[0.14em] text-ink-soft">
                 E-Mail
@@ -82,7 +86,11 @@ export function ContactSection() {
               </span>
             </a>
             <a
-              href={`tel:${SITE.contact.phoneTel}`}
+              href={
+                SITE.contact.phoneTel
+                  ? `tel:${SITE.contact.phoneTel}`
+                  : `mailto:${SITE.contact.email}`
+              }
               className="mt-8 inline-block rounded-full bg-forest px-6 py-3 text-sm font-medium text-cream transition-all hover:-translate-y-0.5 hover:bg-forest-deep"
             >
               {ctaLabel}

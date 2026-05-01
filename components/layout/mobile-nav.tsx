@@ -41,11 +41,15 @@ export function MobileNav() {
             </Link>
           ))}
           <a
-            href={`tel:${SITE.contact.phoneTel}`}
+            href={
+              SITE.contact.phoneTel
+                ? `tel:${SITE.contact.phoneTel}`
+                : `mailto:${SITE.contact.email}`
+            }
             onClick={() => setOpen(false)}
             className="mt-4 inline-flex justify-center rounded-full bg-forest px-5 py-3 text-sm font-medium tracking-wider text-cream"
           >
-            Anrufen
+            {SITE.contact.phoneTel ? "Anrufen" : "E-Mail schreiben"}
           </a>
         </nav>
       </SheetContent>

@@ -12,46 +12,40 @@ export type PriceGroup = {
 
 export const PRICE_GROUPS: PriceGroup[] = [
   {
-    title: "Mitgliedsbeitrag · Erwachsene",
+    title: "Mitgliedschaft",
     rows: [
-      { label: "Jahresbeitrag Einzelmitglied", amount: "108 €" },
-      { label: "Aufnahmegebühr Einzel", amount: "90 €" },
-      { label: "Jahresbeitrag Familie", amount: "170 €" },
-      { label: "Aufnahmegebühr Familie", amount: "170 €" },
-      { label: "Jahresbeitrag Passive Mitglieder", amount: "52 €", detail: "ohne Aufnahmegebühr" },
+      {
+        label: "Aufnahmegebühr",
+        amount: "0 €",
+        detail: "Aktuell wird keine Aufnahmegebühr erhoben",
+      },
+      {
+        label: "Jahresbeitrag",
+        amount: "auf Anfrage",
+        detail: "Der aktuelle Beitrag wird vom Vorstand mitgeteilt",
+      },
+      {
+        label: "Mitgliedsantrag",
+        amount: "per E-Mail",
+        detail: "Antragsformular kommt per E-Mail vom Vorstand",
+      },
     ],
+    note: "Konkrete Beiträge erhalten Sie per E-Mail an info@rv-uetze.de.",
   },
   {
-    title: "Mitgliedsbeitrag · Ermäßigt",
+    title: "Boxenmiete",
     rows: [
-      { label: "Jahresbeitrag Einzel", amount: "54 €" },
-      { label: "Aufnahmegebühr Einzel", amount: "45 €" },
+      {
+        label: "Pensionsbox",
+        amount: "auf Anfrage",
+        detail: "Selbstversorger — Fütterung, Einstreu und Weidegang in Eigenregie",
+      },
+      {
+        label: "Inklusive",
+        amount: "✓",
+        detail: "Außenfenster, beheizte Tränke, Solarium, Waschplatz, Paddock-Mitnutzung",
+      },
     ],
-    note: "Ermäßigt: Kinder, Jugendliche, Voltigierer, Studenten, Azubis, Um-/Schüler",
-  },
-  {
-    title: "Monatlicher Beitrag",
-    rows: [
-      { label: "Voltigierer", amount: "30 €" },
-      { label: "Schulreiter Unterricht", amount: "85 €" },
-      { label: "Anlagennutzung Fremdreiter", amount: "47,60 €" },
-      { label: "Reitbeteiligung Schulpferd", amount: "auf Anfrage" },
-    ],
-  },
-  {
-    title: "Aktivenumlage · jährlich",
-    rows: [
-      { label: "Boxenpächter", amount: "180 €" },
-      { label: "Reiter, Reitbeteiligung, Voltigierer", amount: "90 €" },
-    ],
-    note: "Kann durch Arbeitsstunden (Bonuskarte) abgegolten werden — Aushang am Schwarzen Brett.",
-  },
-  {
-    title: "Boxenmiete · monatlich",
-    rows: [
-      { label: "Box mit Stroheinstreu", amount: "400 €", detail: "Heu 2× tgl., Pellets/Hafer 3× tgl., Mo–Fr Misten + Einstreuen" },
-      { label: "Box mit Leinenstroh", amount: "430 €", detail: "Heu 3× tgl., Pellets/Hafer 3× tgl., Mo–Fr Misten + ggf. Nachstreu" },
-    ],
-    note: "Zusätzlich: Weidepacht. Stand 02/2023, Änderungen vorbehalten.",
+    note: "Aktuell ist eine Box frei. Aktuelle Preise per E-Mail an info@rv-uetze.de.",
   },
 ];

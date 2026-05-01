@@ -7,27 +7,21 @@ export type TeamMember = {
 
 export const TEAM: TeamMember[] = [
   {
-    id: "stephanie",
-    name: "Stephanie Nevado Navarro",
+    id: "schleifer",
+    name: "Dr. Christina Schleifer",
     role: "1. Vorsitzende",
-    bio: "Stephanie führt den Verein. Bei Fragen rund um Boxen, Mitgliedschaft und Vereinsleben ist sie die erste Anlaufstelle — telefonisch oder im Stallbüro.",
+    bio: "Erste Anlaufstelle für alle Vereinsangelegenheiten — Boxenanfragen, Mitgliedschaft, Turnierteilnahme. Postanschrift in Uetze/Katensen, Antworten auch per E-Mail.",
   },
   {
-    id: "bettina",
-    name: "Bettina Lachmann",
-    role: "2. Vorsitzende",
-    bio: "Unterstützt die Vereinsführung im Tagesgeschäft, organisiert Lehrgänge und hat einen Überblick über die kommenden Veranstaltungen.",
+    id: "wehrtmann",
+    name: "Lena-Antje Wehrtmann",
+    role: "Hobby-Horse Trainerin",
+    bio: "Leitet das Hobby-Horse-Training — 14-täglich (gerade Kalenderwochen) Mittwoch 16:30 bis 17:30 Uhr in der Reithalle.",
   },
   {
-    id: "trainer",
-    name: "Trainer & Ausbilder",
-    role: "Reit- und Voltigierunterricht",
-    bio: "Erfahrenes Trainer-Team, qualifiziert für Anfänger bis Fortgeschrittene. Reitstunden Mo–Fr nachmittags und abends, Voltigieren freitags 17–18 Uhr.",
-  },
-  {
-    id: "stallpersonal",
-    name: "Stallpersonal",
-    role: "Pflege & Versorgung",
-    bio: "Drei feste Hände, sehr um das Wohl der Pferde besorgt. Füttern dreimal täglich, Heu morgens und abends, Mo–Fr Misten und Einstreuen.",
+    id: "vorstand",
+    name: "Erweiterter Vorstand",
+    role: "Vereinsführung",
+    bio: "Geführt von einem ehrenamtlich engagierten Team. Konkrete Ansprechpartner für Stallarbeit, Turnier und Veranstaltungen via Aushang am Heulager oder direkter E-Mail.",
   },
 ];

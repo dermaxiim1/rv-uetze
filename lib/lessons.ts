@@ -6,18 +6,18 @@ export type LessonOffering = {
 
 export const LESSONS: LessonOffering[] = [
   {
-    name: "Reiten",
-    schedule: "Mo–Fr nachmittags & abends",
-    desc: "Reitunterricht für Anfänger und Fortgeschrittene auf vereinseigenen Schulpferden. Dressur- und Springstunden für Privatreiter — individuelle Vereinbarungen jederzeit möglich.",
+    name: "Dressur- & Springlehrgänge",
+    schedule: "Wechselnde Termine übers Jahr",
+    desc: "Lehrgänge mit externen Trainern in Dressur, Springen und Bodenarbeit. Termine werden per Aushang am Heulager und per E-Mail angekündigt.",
   },
   {
-    name: "Voltigieren",
-    schedule: "Freitags 17–18 Uhr",
-    desc: "Spielerisch und ohne Zwang in den Reitsport — für Kinder ab sechs Jahren. Umgang mit dem Pferd, Gleichgewicht auf dem Pferderücken, Grundsitz und Stütz.",
+    name: "Hobby-Horse-Training",
+    schedule: "14-täglich · Mittwoch 16:30–17:30",
+    desc: "Hobby-Horse-Training mit Lena-Antje Wehrtmann. In den geraden Kalenderwochen — Einstieg jederzeit möglich.",
   },
   {
-    name: "Schnupperstunde",
-    schedule: "Nach Vereinbarung",
-    desc: "Zuschauen oder selbst ausprobieren — eine erste Reit- oder Voltistunde, ohne Verpflichtung. Schreiben Sie uns einfach eine kurze Nachricht.",
+    name: "Sommerturnier",
+    schedule: "3. Augustwochenende",
+    desc: "Dressur- und Springprüfungen vom Führzügel bis Klasse L. Anmeldung via FN/NeOn — Ausschreibung und Zeitenplan vorab.",
   },
 ];

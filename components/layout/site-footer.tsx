@@ -37,14 +37,16 @@ export function SiteFooter() {
         <div>
           <h4 className="mb-4 font-serif text-base font-medium">{SITE.footer.contactLabel}</h4>
           <ul className="space-y-2 text-sm opacity-80">
-            <li>
-              <a
-                href={`tel:${SITE.contact.phoneTel}`}
-                className="transition-opacity hover:opacity-100"
-              >
-                {SITE.contact.phone}
-              </a>
-            </li>
+            {SITE.contact.phoneTel && (
+              <li>
+                <a
+                  href={`tel:${SITE.contact.phoneTel}`}
+                  className="transition-opacity hover:opacity-100"
+                >
+                  {SITE.contact.phone}
+                </a>
+              </li>
+            )}
             <li>
               <a
                 href={`mailto:${SITE.contact.email}`}

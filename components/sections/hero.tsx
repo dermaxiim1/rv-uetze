@@ -43,17 +43,23 @@ export function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href={`tel:${SITE.contact.phoneTel}`}
-            className="inline-flex items-center gap-2 rounded-full bg-cream px-7 py-4 text-sm font-medium tracking-wider text-ink transition-all hover:-translate-y-0.5 hover:bg-hay focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream"
-          >
-            {SITE.contact.phone} <span aria-hidden>→</span>
-          </a>
+          {SITE.contact.phoneTel && (
+            <a
+              href={`tel:${SITE.contact.phoneTel}`}
+              className="inline-flex items-center gap-2 rounded-full bg-cream px-7 py-4 text-sm font-medium tracking-wider text-ink transition-all hover:-translate-y-0.5 hover:bg-hay focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream"
+            >
+              {SITE.contact.phone} <span aria-hidden>→</span>
+            </a>
+          )}
           <a
             href={`mailto:${SITE.contact.email}`}
-            className="inline-flex items-center gap-2 rounded-full border border-cream/40 px-7 py-4 text-sm font-medium tracking-wider text-cream transition-all hover:-translate-y-0.5 hover:bg-cream/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream"
+            className={
+              SITE.contact.phoneTel
+                ? "inline-flex items-center gap-2 rounded-full border border-cream/40 px-7 py-4 text-sm font-medium tracking-wider text-cream transition-all hover:-translate-y-0.5 hover:bg-cream/10 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream"
+                : "inline-flex items-center gap-2 rounded-full bg-cream px-7 py-4 text-sm font-medium tracking-wider text-ink transition-all hover:-translate-y-0.5 hover:bg-hay focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cream"
+            }
           >
-            {hero.secondaryCtaLabel}
+            {hero.secondaryCtaLabel} <span aria-hidden>→</span>
           </a>
         </div>
 

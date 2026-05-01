@@ -32,13 +32,17 @@ export function PensionSection() {
 
         <p className="mt-14 max-w-2xl border-l-2 border-forest/40 pl-6 text-base italic leading-relaxed text-ink-soft">
           {contactNote.prefix}
-          <a
-            href={`tel:${SITE.contact.phoneTel}`}
-            className="text-forest underline decoration-1 underline-offset-4"
-          >
-            {SITE.contact.phone}
-          </a>
-          {contactNote.join}
+          {SITE.contact.phoneTel && (
+            <>
+              <a
+                href={`tel:${SITE.contact.phoneTel}`}
+                className="text-forest underline decoration-1 underline-offset-4"
+              >
+                {SITE.contact.phone}
+              </a>
+              {contactNote.join}
+            </>
+          )}
           <a
             href={`mailto:${SITE.contact.email}`}
             className="text-forest underline decoration-1 underline-offset-4"

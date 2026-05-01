@@ -25,10 +25,14 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-3">
           <a
-            href={`tel:${SITE.contact.phoneTel}`}
+            href={
+              SITE.contact.phoneTel
+                ? `tel:${SITE.contact.phoneTel}`
+                : `mailto:${SITE.contact.email}`
+            }
             className="hidden rounded-full bg-forest px-5 py-2.5 text-xs font-medium tracking-[0.04em] text-cream transition-all hover:-translate-y-px hover:bg-forest-deep md:inline-block"
           >
-            Anrufen
+            {SITE.contact.phoneTel ? "Anrufen" : "E-Mail"}
           </a>
           <MobileNav />
         </div>

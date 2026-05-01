@@ -5,27 +5,27 @@ export type PensionFeature = {
 
 export const PENSION_FEATURES: PensionFeature[] = [
   {
-    title: "23 Innen- und Außenboxen",
-    desc: "8–16 m² groß, luftig und geräumig. Innenboxen mit Oberlicht, direkter Übergang zur Halle. Außenboxen für Pferde mit Frischluft-Bedarf.",
+    title: "18 helle, luftige Boxen",
+    desc: "Großzügig dimensioniert mit Außenfenstern. Aktuell ist eine Box frei — Anfragen per E-Mail an den Vorstand.",
   },
   {
-    title: "Fütterung dreimal täglich",
-    desc: "Hafer oder Pellets dreimal täglich, Heu morgens und abends. Dritte Heuportion mittags gegen Aufpreis möglich, auf Wunsch auch nasses Heu.",
+    title: "Beheizte Tränken",
+    desc: "Alle Boxen mit beheizten Tränken — auch im Winter zuverlässige Wasserversorgung ohne Frost.",
   },
   {
-    title: "Mistarbeit Mo–Fr",
-    desc: "Tägliches Misten und Einstreuen mit Stroh. Boxen mit Leinenstroh ebenfalls möglich.",
+    title: "Solarium im Stallgebäude",
+    desc: "Solarium für die Pflege nach Training, Ausritt oder Turnier — direkt im Stallgebäude.",
   },
   {
-    title: "Sommerweiden",
-    desc: "Werktags morgens raus, mittags rein. Harmonische Gruppen, fester Weideplatz von Frühjahr bis Herbst möglich.",
+    title: "Waschplatz mit Warmwasser",
+    desc: "Eigener Waschplatz mit warmem und kaltem Wasser. Reinigungsausrüstung kann im Stall verbleiben.",
   },
   {
-    title: "Winterweiden & Paddocks",
-    desc: "Werktags Paddock, je nach Wetterlage zusätzlich Winterweide. Tägliche Bewegung das ganze Jahr.",
+    title: "Zwei separate Paddocks",
+    desc: "Getrennte Paddocks für Stuten und Wallache, mit Heu-Raufen. Tägliche Bewegung das ganze Jahr — auch im Winter.",
   },
   {
-    title: "Aufmerksames Stallpersonal",
-    desc: "Drei feste Hände, sehr um das Wohl der Pferde besorgt. Kurze Wege zwischen Stall, Halle und Vorstand.",
+    title: "Selbstversorger-Konzept",
+    desc: "Fütterung, Einstreu und Weide- bzw. Paddockgang organisieren die Einsteller eigenverantwortlich. Direkter Draht zwischen Einstellern und Vorstand — kleiner Verein, kurze Wege.",
   },
 ];
